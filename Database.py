@@ -14,6 +14,7 @@ class Database:
             password = self.password,
             database = self.database
         )
+        self.cursor = self.connection.cursor()
 
     def disconnect(self):
         self.connection.close()
