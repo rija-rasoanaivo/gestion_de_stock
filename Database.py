@@ -24,9 +24,20 @@ class Database:
         self.cursor.execute(query, parametre or())
         self.connection.commit()
         self.disconnect()
+        print("Query executed successfully")
 
     def fetch(self, query, parametre = None):
         self.connect()
         self.cursor.execute(query, parametre or())
         result = self.cursor.fetchall()
+        print("Fetch completed")
         return result
+    
+# if __name__ == "__main__":
+#     db = Database(host="localhost", user="root", password="Rija", database="store")
+
+#     # Test de la méthode executeQuery
+#     db.executeQuery("INSERT INTO category (name) VALUES (%s)", ('valeur1',))
+
+#     result = db.fetch("SELECT * FROM category")
+#     print(result)  # Affichage des données récupérées
