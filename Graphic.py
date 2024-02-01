@@ -40,8 +40,8 @@ class Graphic:
         
     #     self.main = main_instance # Stocker une référence à l'instance de la classe Main
 
-# if __name__ == "__main__":
-#     graphic = Graphic()
-#     graphic.draw_menu()
+
+# graphic = Graphic()
+# graphic.run()
         
 
