@@ -48,6 +48,6 @@ class Main:
     #         print(f"ID de la catégorie : {product[5]}")
     #         print("=====================================")
     #         time.sleep(1)
-        # self.menu()
+    #     self.menu()
 
 Main()

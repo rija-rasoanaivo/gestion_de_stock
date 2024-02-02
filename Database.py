@@ -30,7 +30,7 @@ class Database:
         self.connect()
         self.cursor.execute(query, parametre or())
         result = self.cursor.fetchall()
-        print("Fetch completed")
+        # print("Fetch completed")
         return result
     
 # if __name__ == "__main__":
