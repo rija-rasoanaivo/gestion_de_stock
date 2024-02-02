@@ -1,5 +1,6 @@
 import pygame
 from ProductCreationWindow import ProductCreationWindow
+from ReadProductWindow import ReadProductWindow
 
 class Graphic:
     def __init__(self):
@@ -26,14 +27,20 @@ class Graphic:
 
     def draw_interface(self):
         # Dessiner les éléments de l'interface graphique, y compris le texte "1. Créer un produit"
-        text_surface = self.font.render('1. Créer un produit', True, (0, 0, 0))
-        self.screen.blit(text_surface, (50, 50))
+        text_surface_creer_produit = self.font.render('1. Créer un produit', True, (0, 0, 0))
+        self.screen.blit(text_surface_creer_produit, (50, 50))
+
+        text_surface_afficher_les_produits = self.font.render('2. Afficher les produits', True, (0, 0, 0))
+        self.screen.blit(text_surface_afficher_les_produits, (50, 70))
 
     def handle_click(self, pos):
         # Vérifier si le clic de souris se trouve dans la zone de texte "1. Créer un produit"
-        if 50 <= pos[0] <= 50 + 200 and 50 <= pos[1] <= 50 + 30:
+        if 50 <= pos[0] <= 50 + 200 and 50 <= pos[1] <= 50 + 20:
             window = ProductCreationWindow()
             # Lancer la boucle principale
+            window.run()
+        elif 50 <= pos[0] <= 50 + 200 and 70 <= pos[1] <= 70 + 20:
+            window = ReadProductWindow()
             window.run()
 
     # def set_main(self, main_instance):

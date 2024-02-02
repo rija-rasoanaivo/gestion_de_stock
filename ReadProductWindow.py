@@ -32,7 +32,7 @@ class ReadProductWindow:
             products = self.gestionnaire.readProduct()
 
             # Début des produits en dessous de chaque colonne
-            y_offset = 70
+            y_offset = 20
 
             # Afficher les informations de chaque produit par colonne
             for product in products:
