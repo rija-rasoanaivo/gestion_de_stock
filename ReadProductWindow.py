@@ -37,14 +37,14 @@ class ReadProductWindow:
             # Afficher les informations de chaque produit par colonne
             for product in products:
                 # Réinitialiser la position horizontale pour chaque produit
-                x = 50
+                # x = 50
                 # Afficher les informations de chaque colonne
                 for column, position in self.column_positions.items() :
                     info_text = f"{column }: {product[column]}"
                     text_surface = self.font.render(info_text, True, (0, 0, 0))
                     self.screen.blit(text_surface, (position[0] , y_offset))
                     # Augmenter la position horizontale pour la prochaine colonne
-                    x += 100
+                    # x += 200
                 # Augmenter la position verticale pour le prochain produit
                 y_offset += 20
 

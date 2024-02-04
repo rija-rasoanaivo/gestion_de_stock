@@ -24,7 +24,7 @@ class Database:
         self.cursor.execute(query, parametre or())
         self.connection.commit()
         self.disconnect()
-        print("Query executed successfully")
+        # print("Query executed successfully")
 
     def fetch(self, query, parametre = None):
         self.connect()
