@@ -1,4 +1,5 @@
 from Database import Database
+import csv
 
 class Product:
     def __init__(self):
@@ -28,3 +29,10 @@ class Product:
         query = f"SELECT * FROM {self.table} WHERE id=%s"
         paramatre = (id,)
         return self.database.fetch(query, paramatre)
+    
+    def exportCsvFile(self):
+        query = f"SELECT * FROM {self.table} INTO OUTFILE 'tableau.csv'"
+        return self.database.executeQuery(query)
+    
+# run = Product()
+# run.exportCsvFile()

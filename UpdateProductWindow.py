@@ -103,5 +103,5 @@ class UpdateProductWindow:
 
         self.gestionnaire.updateProduct(name, description, price, quantity, id_category, id)
 
-window = UpdateProductWindow()
-window.run()
+# window = UpdateProductWindow()
+# window.run()
